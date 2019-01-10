@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundry.StudentInfoController">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="600.0">
+         <center>
+            <AnchorPane fx:id="studentInfoPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="243.0" layoutY="14.0" text="Student info" textFill="RED">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="BackbtnID" layoutX="29.0" layoutY="30.0" mnemonicParsing="false" onAction="#backButtonClicked" prefHeight="41.0" prefWidth="66.0" text="Back" textFill="RED">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="48.0" layoutY="122.0" text="Student ID:" textFill="RED" />
+                  <Label layoutX="48.0" layoutY="162.0" text="Student Name :" textFill="RED" />
+                  <Label layoutX="48.0" layoutY="200.0" text="Student MemberShip :" textFill="RED" />
+                  <Label layoutX="48.0" layoutY="239.0" text="Student Operation :" textFill="RED" />
+                  <Label layoutX="48.0" layoutY="274.0" text="Froozen :" textFill="RED" />
+                  <TextField fx:id="StudentIDField" editable="false" layoutX="178.0" layoutY="118.0" promptText="Student ID" />
+                  <TextField fx:id="StudentNameField" editable="false" layoutX="178.0" layoutY="158.0" promptText="Student Name" />
+                  <TextField fx:id="StudentStatusField" editable="false" layoutX="178.0" layoutY="196.0" promptText="Status" />
+                  <TextField fx:id="StudentOprField" editable="false" layoutX="178.0" layoutY="235.0" promptText="Operation" />
+                  <Button fx:id="StatusUpdtBtn" layoutX="531.0" layoutY="196.0" mnemonicParsing="false" onAction="#UpdateButtonClicked" text="Update" />
+                  <ComboBox fx:id="ComboBoxID" layoutX="349.0" layoutY="196.0" prefHeight="25.0" prefWidth="164.0" promptText="Choose MemberShip :" />
+                  <CheckBox fx:id="checkBoxID" layoutX="178.0" layoutY="274.0" mnemonicParsing="false" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

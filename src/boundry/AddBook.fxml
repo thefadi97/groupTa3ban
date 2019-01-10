@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="695.0" style="-fx-background-color: #5b94d1;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundry.AddBookController">
+   <children>
+      <Label alignment="CENTER" layoutX="289.0" layoutY="55.0" text="Add a book" underline="true">
+         <font>
+            <Font name="Times New Roman" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="169.0" text="Book Name:" />
+      <TextField fx:id="bookNameID" layoutX="160.0" layoutY="165.0" promptText="Book Name" />
+      <Label layoutX="56.0" layoutY="203.0" text="Author Name:" />
+      <TextField fx:id="AuthorNameID" layoutX="160.0" layoutY="199.0" promptText="Author Name" />
+      <Label layoutX="56.0" layoutY="238.0" text="Catalog Number:" />
+      <TextField fx:id="BookCatalogID" layoutX="160.0" layoutY="234.0" promptText="Catalog Number" />
+      <Label layoutX="56.0" layoutY="275.0" text="Printed Date:" />
+      <Label layoutX="56.0" layoutY="311.0" text="Subject:" />
+      <Label layoutX="56.0" layoutY="345.0" text="Public Number:" />
+      <Label layoutX="385.0" layoutY="169.0" text="Copies Number:" />
+      <Label layoutX="385.0" layoutY="203.0" text="Table Of Contents:" />
+      <Label layoutX="390.0" layoutY="238.0" text="Order Date:" />
+      <Label layoutX="390.0" layoutY="275.0" text="Place:" />
+      <Label layoutX="390.0" layoutY="311.0" text="Summary:" />
+      <TextField fx:id="printedDateID" layoutX="160.0" layoutY="271.0" promptText="Printed Date" />
+      <TextField fx:id="SubjectID" layoutX="160.0" layoutY="307.0" promptText="Subject" />
+      <TextField fx:id="publicNumberID" layoutX="160.0" layoutY="341.0" promptText="Public Number" />
+      <TextField fx:id="CopiesNumberID" layoutX="487.0" layoutY="165.0" promptText="Copies Number" />
+      <TextField fx:id="TableOfContentID" layoutX="487.0" layoutY="199.0" promptText="Table Of Contents" />
+      <TextField fx:id="OrderDateID" layoutX="487.0" layoutY="234.0" promptText="Order Date" />
+      <TextField fx:id="PlaceID" layoutX="487.0" layoutY="271.0" promptText="Place" />
+      <TextArea fx:id="SummaryID" layoutX="487.0" layoutY="311.0" prefHeight="106.0" prefWidth="149.0" promptText="Write here a summary about the book" />
+      <Button layoutX="209.0" layoutY="403.0" mnemonicParsing="false" onAction="#AddButtonClicked" prefHeight="44.0" prefWidth="91.0" text="Add">
+         <font>
+            <Font name="Candara" size="19.0" />
+         </font>
+      </Button>
+      <Label layoutX="56.0" layoutY="107.0" text="Fill the following form about the book details:" underline="true">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="85.0" fitWidth="86.0" layoutX="530.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/obl-logos/add-book-more-plus-choice-512.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="392.0" layoutY="447.0" text="* All fields are requird" />
+      <Label layoutX="42.0" layoutY="69.0" text="Back" />
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="29.0" layoutY="21.0" onDragDetected="#backButtonClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/obl-logos/go-back-2-894878.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

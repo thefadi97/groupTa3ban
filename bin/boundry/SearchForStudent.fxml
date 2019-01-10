@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundry.SearchForStudentController">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;">
+         <top>
+            <Label text="Enter ID to search" textFill="RED" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+         </top>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="162.0" layoutY="134.0" text="Enter Student ID:" textFill="RED">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="studentID" layoutX="313.0" layoutY="132.0" promptText="student ID" />
+                  <Button fx:id="SearchBtn" layoutX="255.0" layoutY="255.0" mnemonicParsing="false" onAction="#Searchbutton" text="Search" textFill="RED">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

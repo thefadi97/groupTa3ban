@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="loginPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="695.0" style="-fx-background-color: #5b94d1;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundry.loginController">
+   <children>
+      <Label alignment="TOP_LEFT" layoutX="290.0" layoutY="30.0" prefHeight="112.0" prefWidth="163.0" text="OBL" textAlignment="CENTER">
+         <font>
+            <Font size="77.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_LEFT" layoutX="304.0" layoutY="115.0" text="Ort Braude Library">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="322.0" layoutY="170.0" text="LOGIN" underline="true">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="243.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../obl-logos/_username_login_1172613.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="246.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../obl-logos/pass.png" />
+         </image>
+      </ImageView>
+      <PasswordField fx:id="passID" layoutX="286.0" layoutY="274.0" promptText="Password" />
+      <TextField fx:id="userID" layoutX="286.0" layoutY="228.0" promptText="Username" />
+      <Button layoutX="334.0" layoutY="329.0" mnemonicParsing="false" onAction="#logInButtonClicked" text="LOGIN" textAlignment="CENTER" wrapText="true" AnchorPane.topAnchor="329.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="15.0" layoutY="434.0" text="No existing account? you can search for any book :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Button layoutX="311.0" layoutY="428.0" mnemonicParsing="false" onAction="#SearchForABookClicked" prefHeight="30.0" prefWidth="138.0" text="Search for a book">
+         <font>
+            <Font name="Arial Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <ImageView blendMode="COLOR_BURN" fitHeight="150.0" fitWidth="200.0" layoutX="526.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" rotate="15.0">
+         <image>
+            <Image url="@../obl-logos/untitled.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

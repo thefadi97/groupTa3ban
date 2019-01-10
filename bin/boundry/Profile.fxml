@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="695.0" style="-fx-background-color: #5b94d1;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundry.ProfileController">
+   <children>
+      <Label layoutX="35.0" layoutY="66.0" text="Go back" />
+      <ImageView fitHeight="65.0" fitWidth="58.0" layoutX="27.0" layoutY="14.0" onMouseClicked="#BackButtonClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/obl-logos/go-back-2-894878.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="120.0" fitWidth="106.0" layoutX="538.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../obl-logos/Business_Man-512.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="40.0" layoutY="115.0" text="Personal Information:">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="172.0" text="Member ID:" />
+      <Label layoutX="40.0" layoutY="252.0" text="First Name:" />
+      <Label layoutX="40.0" layoutY="292.0" text="Last Name:" />
+      <Label layoutX="40.0" layoutY="411.0" text="Phone No." />
+      <Label layoutX="40.0" layoutY="372.0" text="E-Mail:" />
+      <Label layoutX="40.0" layoutY="332.0" text="Password:" />
+      <Label layoutX="40.0" layoutY="212.0" text="Status:" />
+      <Line endX="600.0" layoutX="35.0" layoutY="200.0" opacity="0.5" />
+      <Line endX="600.0" layoutX="35.0" layoutY="160.0" />
+      <Line endX="600.0" layoutX="35.0" layoutY="240.0" opacity="0.5" />
+      <Line endX="600.0" layoutX="35.0" layoutY="280.0" opacity="0.5" />
+      <Line endX="600.0" layoutX="35.0" layoutY="320.0" opacity="0.5" />
+      <Line endX="600.0" layoutX="35.0" layoutY="360.0" opacity="0.5" />
+      <Line endX="600.0" layoutX="35.0" layoutY="400.0" opacity="0.5" />
+      <Line endX="600.0" layoutX="35.0" layoutY="440.0" />
+      <Label layoutX="597.0" layoutY="252.0" onMouseClicked="#EditFirstNameClicked" text="Edit" textFill="#e1ff00" underline="true">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="597.0" layoutY="292.0" onMouseClicked="#EditLastNameClicked" text="Edit" textFill="#e1ff00" underline="true">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="597.0" layoutY="332.0" onMouseClicked="#EditPasswordClicked" text="Edit" textFill="#e1ff00" underline="true">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="597.0" layoutY="372.0" onMouseClicked="#EditEmailClicked" text="Edit" textFill="#e1ff00" underline="true">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="597.0" layoutY="411.0" onMouseClicked="#EditPhoneNumberClicked" text="Edit" textFill="#e1ff00" underline="true">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="287.0" layoutY="172.0" text="########" />
+      <Label layoutX="287.0" layoutY="212.0" text="Active/DisActive" />
+      <Label fx:id="UserFirstNameID" layoutX="287.0" layoutY="252.0" text="FirstName" />
+      <Label fx:id="UserLastNameID" layoutX="287.0" layoutY="292.0" text="LastName" />
+      <Label fx:id="UserPasswordID" layoutX="287.0" layoutY="332.0" text="*********" />
+      <Label fx:id="UserEmailID" layoutX="287.0" layoutY="372.0" text="example@braude.com" />
+      <Label fx:id="UserPhoneID" layoutX="287.0" layoutY="412.0" text="04-########" />
+   </children>
+</AnchorPane>

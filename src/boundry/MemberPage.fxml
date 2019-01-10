@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="MemberPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="695.0" style="-fx-background-color: #5b94d1;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundry.MemberPageController">
+   <children>
+      <Accordion layoutX="21.0" layoutY="119.0" />
+      <Text fontSmoothingType="LCD" layoutX="40.0" layoutY="64.0" rotate="-15.0" stroke="#e49000" strokeType="OUTSIDE" strokeWidth="0.0" text="OBL" textAlignment="CENTER">
+         <font>
+            <Font name="System Italic" size="43.0" />
+         </font>
+      </Text>
+      <TabPane layoutX="19.0" layoutY="100.0" prefHeight="364.0" prefWidth="649.0" style="-fx-border-color: black; -fx-border-width: 2;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="extend loaned book">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="47.0" layoutY="105.0" text="Subscriber ID:  *" />
+                        <TextField fx:id="SubscriberID" layoutX="167.0" layoutY="101.0" promptText="Subscriber ID" />
+                        <Label layoutX="47.0" layoutY="148.0" text="Book Name:  *" />
+                        <TextField fx:id="BookNameID" layoutX="167.0" layoutY="144.0" promptText="Book Name" />
+                        <Button layoutX="196.0" layoutY="258.0" mnemonicParsing="false" onAction="#ExtendABookButtonClicked" prefHeight="40.0" prefWidth="90.0" text="extend!">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Button>
+                        <ImageView blendMode="HARD_LIGHT" fitHeight="150.0" fitWidth="200.0" layoutX="418.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../obl-logos/icon-circulation.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="47.0" layoutY="40.0" text="Please fill the following fields:" underline="true">
+                           <font>
+                              <Font name="System Bold Italic" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="42.0" layoutY="194.0" text="The fields with ( * ) is required !" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Activiteis Log">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="ActivitesLogTableID" prefHeight="334.0" prefWidth="649.0" style="-fx-background-color: #5b94d1;">
+                          <columns>
+                            <TableColumn prefWidth="97.0" text="activity number" />
+                            <TableColumn prefWidth="90.0" text="book loaned" />
+                              <TableColumn prefWidth="120.0" text="book returned date" />
+                              <TableColumn prefWidth="63.0" text="extended" />
+                              <TableColumn prefWidth="76.0" text="Delay days" />
+                              <TableColumn prefWidth="112.0" text="Book name" />
+                              <TableColumn prefWidth="83.0" text="Ordered book" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Messages">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="36.0" layoutY="11.0" text="My Messages:" underline="true">
+                           <font>
+                              <Font name="System Bold Italic" size="16.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="SubscriberMessagesTableID" layoutX="-4.0" layoutY="56.0" prefHeight="275.0" prefWidth="649.0">
+                          <columns>
+                            <TableColumn prefWidth="98.0" text="From:" />
+                            <TableColumn prefWidth="92.0" text="Date:" />
+                              <TableColumn prefWidth="100.0" text="Subject:" />
+                              <TableColumn prefWidth="358.0" text="Content:" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <ImageView blendMode="DARKEN" fitHeight="40.0" fitWidth="40.0" layoutX="556.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../obl-logos/_username_login_1172613.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="620.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../obl-logos/1333_door-512.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="38.0" layoutY="61.0" rotate="-15.0" text="Ort Braude Library" />
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="474.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../obl-logos/search.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="178.0" layoutY="13.0" text="Username:" />
+      <Label layoutX="330.0" layoutY="13.0" text="Time:" />
+      <Label fx:id="UserNameLabelID" layoutX="243.0" layoutY="13.0" text="Label" />
+      <Label fx:id="TimeLabelID" layoutX="367.0" layoutY="13.0" text="Label" />
+      <Button layoutX="610.0" layoutY="69.0" mnemonicParsing="false" onAction="#LogOutButtonClicked" text="Log out" />
+      <Button layoutX="549.0" layoutY="69.0" mnemonicParsing="false" onAction="#ProfileButtonClicked" text="Profile" />
+      <Button layoutX="432.0" layoutY="69.0" mnemonicParsing="false" onAction="#SearchForABookButtonClicked" text="Search for a book" />
+   </children>
+</AnchorPane>

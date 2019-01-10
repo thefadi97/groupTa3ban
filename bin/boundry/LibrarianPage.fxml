@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="695.0" style="-fx-background-color: #5b94d1;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundry.LibrarianPageController">
+   <children>
+      <Accordion layoutX="21.0" layoutY="119.0" />
+      <Text fontSmoothingType="LCD" layoutX="40.0" layoutY="64.0" rotate="-15.0" stroke="#e49000" strokeType="OUTSIDE" strokeWidth="0.0" text="OBL" textAlignment="CENTER">
+         <font>
+            <Font name="System Italic" size="43.0" />
+         </font>
+      </Text>
+      <TabPane layoutX="19.0" layoutY="100.0" prefHeight="364.0" prefWidth="649.0" style="-fx-border-color: black; -fx-border-width: 2;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Loan a book">
+               <content>
+                  <AnchorPane fx:id="UserNameLabelID" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="27.0" layoutY="35.0" text="Subscriber ID:" />
+                        <TextField fx:id="SubscriberLoaningID" layoutX="147.0" layoutY="31.0" />
+                        <Label layoutX="27.0" layoutY="78.0" text="Catalog number:" />
+                        <TextField fx:id="bookCatalogNumberToLoanID" layoutX="147.0" layoutY="74.0" />
+                        <Button layoutX="315.0" layoutY="31.0" mnemonicParsing="false" onAction="#VerifySubscriberID" text="Verify" />
+                        <Button layoutX="315.0" layoutY="73.0" mnemonicParsing="false" onAction="#VerifyBookCatalogID" text="Verify" />
+                        <Label layoutX="27.0" layoutY="176.0" prefHeight="17.0" prefWidth="81.0" text="loaned date:" />
+                        <Line endX="100.0" layoutX="296.0" layoutY="116.0" startX="-100.0" />
+                        <DatePicker fx:id="LoanedDateID" layoutX="146.0" layoutY="172.0" />
+                        <Button layoutX="196.0" layoutY="258.0" mnemonicParsing="false" onAction="#LoanConfirmedClicked" prefHeight="40.0" prefWidth="90.0" text="Confirm">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Button>
+                        <ImageView blendMode="HARD_LIGHT" fitHeight="150.0" fitWidth="200.0" layoutX="418.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/obl-logos/icon-circulation.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Returning book">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="27.0" layoutY="35.0" text="Catalog number:" />
+                        <TextField fx:id="bookCatalogNumberToReturnID" layoutX="147.0" layoutY="31.0" />
+                        <DatePicker fx:id="retunringDateID" layoutX="146.0" layoutY="132.0" />
+                        <Label layoutX="27.0" layoutY="136.0" text="Date:" />
+                        <Button layoutX="315.0" layoutY="31.0" mnemonicParsing="false" onAction="#VerifyBookCatalogID" text="Verify" />
+                        <Line endX="100.0" layoutX="296.0" layoutY="116.0" startX="-100.0" />
+                        <Button layoutX="151.0" layoutY="243.0" mnemonicParsing="false" onAction="#ReturnConfirmedClicked" prefHeight="40.0" prefWidth="90.0" text="Confirm">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="400.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../obl-logos/library-015-512.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="SubscriberToViewID" text="View member">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="53.0" layoutY="121.0" text="Enter Member ID:" />
+                        <TextField fx:id="subscriberToViewID" layoutX="152.0" layoutY="117.0" />
+                        <Button blendMode="HARD_LIGHT" layoutX="132.0" layoutY="194.0" mnemonicParsing="false" onAction="#SearchForSubscriberClicked" prefHeight="42.0" prefWidth="81.0" text="Search">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                        </Button>
+                        <Text layoutX="51.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search for a member in the library system and update some details for this member" textAlignment="CENTER">
+                           <font>
+                              <Font name="Bodoni MT" size="16.0" />
+                           </font>
+                           <effect>
+                              <Reflection />
+                           </effect>
+                        </Text>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="400.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../obl-logos/User_info.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Register a new member">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="320.0" prefWidth="645.0">
+                     <children>
+                        <Label layoutX="32.0" layoutY="65.0" text="FirstName:  *" />
+                        <Label layoutX="32.0" layoutY="100.0" text="LastName:  *" />
+                        <Label layoutX="32.0" layoutY="200.0" text="Phone No. *" />
+                        <Label layoutX="32.0" layoutY="235.0" text="E-mail:  *" />
+                        <TextField fx:id="subscriberNameToRegID" layoutX="113.0" layoutY="61.0" promptText="First Name" />
+                        <Label layoutX="32.0" layoutY="165.0" text="Password:  *" />
+                        <TextField fx:id="subscriberLastNameToRegID" layoutX="113.0" layoutY="96.0" promptText="Last Name" />
+                        <TextField fx:id="subscriberPassToRegID" layoutX="113.0" layoutY="162.0" promptText="Password" />
+                        <TextField fx:id="subscriberPhoneToRegID" layoutX="113.0" layoutY="196.0" promptText="Phone Number" />
+                        <TextField fx:id="subscriberEmailToRegID" layoutX="113.0" layoutY="231.0" promptText="E-mail Addreas" />
+                        <Button layoutX="173.0" layoutY="267.0" mnemonicParsing="false" onAction="#RegisterNewMemberClicked" prefHeight="33.0" prefWidth="89.0" style="-fx-background-image: url (&quot;file:C:/Users/Fadi/Desktop/oblLogos/61183.jpg&quot;);" text="Register">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="32.0" layoutY="15.0" text="Please fill the form with the member details :" underline="true">
+                           <font>
+                              <Font name="System Bold Italic" size="17.0" />
+                           </font>
+                        </Label>
+                        <ImageView blendMode="SRC_ATOP" fitHeight="150.0" fitWidth="200.0" layoutX="400.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../obl-logos/Register-512.png" />
+                           </image></ImageView>
+                        <Label layoutX="32.0" layoutY="133.0" text="Subscriber ID:  *" />
+                        <TextField fx:id="subscriberToRegID" layoutX="113.0" layoutY="129.0" promptText="ID Number" />
+                        <Label layoutX="30.0" layoutY="303.0" text="All fields with (*) is requird." />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Books stock">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutY="49.0" prefHeight="285.0" prefWidth="649.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="Book name" />
+                            <TableColumn prefWidth="75.0" text="Author Name" />
+                              <TableColumn prefWidth="75.0" text="Public No." />
+                              <TableColumn prefWidth="75.0" text="Print Date" />
+                              <TableColumn prefWidth="75.0" text="Subject" />
+                              <TableColumn prefWidth="75.0" text="Summary" />
+                              <TableColumn prefWidth="75.0" text="Catalog No." />
+                              <TableColumn prefWidth="75.0" text="Copies No." />
+                              <TableColumn prefWidth="75.0" text="Column X" />
+                              <TableColumn prefWidth="75.0" text="Column X" />
+                              <TableColumn prefWidth="75.0" text="Column X" />
+                              <TableColumn prefWidth="75.0" text="Column X" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="54.0" layoutY="12.0" mnemonicParsing="false" onAction="#AddBookToStockClicked" prefHeight="25.0" prefWidth="100.0" text="Add a Book" />
+                        <Button layoutX="221.0" layoutY="12.0" mnemonicParsing="false" onAction="#RemoveBookFromStockClicked" prefWidth="100.0" text="Remove a book" />
+                        <ImageView fitHeight="20.0" fitWidth="30.0" layoutX="20.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../obl-logos/61183.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="50.0" fitWidth="54.0" layoutX="173.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../obl-logos/remove-icon-614x460.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Messages">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="36.0" layoutY="11.0" prefHeight="26.0" prefWidth="133.0" text="My Messages:" underline="true">
+                           <font>
+                              <Font name="System Bold Italic" size="16.0" />
+                           </font>
+                        </Label>
+                        <TableView layoutX="-4.0" layoutY="56.0" prefHeight="275.0" prefWidth="649.0">
+                          <columns>
+                            <TableColumn prefWidth="98.0" text="From:" />
+                            <TableColumn prefWidth="92.0" text="Date:" />
+                              <TableColumn prefWidth="100.0" text="Subject:" />
+                              <TableColumn prefWidth="358.0" text="Content:" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <ImageView blendMode="DARKEN" fitHeight="40.0" fitWidth="40.0" layoutX="556.0" layoutY="21.0" onMouseClicked="#ProfileButtonClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/obl-logos/Business_Man-512.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="559.0" layoutY="64.0" text="Profile" />
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="620.0" layoutY="21.0" onMouseClicked="#LogOutButtonClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/obl-logos/1333_door-512.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="626.0" layoutY="64.0" text="Log out" />
+      <Label layoutX="38.0" layoutY="61.0" rotate="-15.0" text="Ort Braude Library" />
+      <Label layoutX="471.0" layoutY="64.0" text="Search a book" />
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="485.0" layoutY="21.0" onMouseClicked="#SearchForABookButtonClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/obl-logos/_username_login_1172613.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="178.0" layoutY="13.0" text="Username:" />
+      <Label layoutX="330.0" layoutY="13.0" text="Time:" />
+      <Label fx:id="UserNameLabelID" layoutX="243.0" layoutY="13.0" text="Label" />
+      <Label fx:id="TimeLabelID" layoutX="367.0" layoutY="13.0" text="Label" />
+   </children>
+</AnchorPane>

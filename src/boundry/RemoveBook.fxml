@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="492.0" prefWidth="695.0" style="-fx-background-color: #5b94d1;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="boundry.RemoveBookController">
+   <children>
+      <Label layoutX="279.0" layoutY="85.0" text="Remove A book" underline="true">
+         <font>
+            <Font name="Times New Roman" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="137.0" text="Please enter the Book catalog number you want to remove from the library:" underline="true">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="238.0" text="Book catalog number:" />
+      <TextField fx:id="BookCatalogNumberID" layoutX="193.0" layoutY="234.0" promptText="Book catalog number" />
+      <Button layoutX="301.0" layoutY="348.0" mnemonicParsing="false" onAction="#RemoveBookFromStockClicked" text="Remove">
+         <font>
+            <Font name="Candara" size="19.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="80.0" fitWidth="73.0" layoutX="564.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../obl-logos/155-512.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="29.0" layoutY="21.0" onMouseClicked="#BackButtonClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../obl-logos/go-back-2-894878.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="40.0" layoutY="70.0" text="Back" />
+   </children>
+</AnchorPane>
